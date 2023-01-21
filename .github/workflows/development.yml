@@ -1,9 +1,8 @@
 name: CI
 
 on:
-  push:
-    branches: [2.2.x]
-  pull_request:
+  workflow_dispatch:
+
 
 jobs:
   test-deploy:

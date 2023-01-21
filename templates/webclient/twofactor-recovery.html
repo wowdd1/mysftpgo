@@ -1,0 +1,26 @@
+{{template "baselogin" .}}
+
+{{define "title"}}Two-Factor recovery{{end}}
+
+{{define "content"}}
+                                    {{if .Error}}
+                                    <div class="card mb-4 border-left-warning">
+                                        <div class="card-body text-form-error">{{.Error}}</div>
+                                    </div>
+                                    {{end}}
+                                    <form id="login_form" action="{{.CurrentURL}}" method="POST" autocomplete="off"
+                                        class="user-custom">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user-custom"
+                                                id="inputRecoveryCode" name="recovery_code" placeholder="Recovery code" required>
+                                        </div>
+                                        <input type="hidden" name="_form_token" value="{{.CSRFToken}}">
+                                        <button type="submit" class="btn btn-primary btn-user-custom btn-block">
+                                            Verify
+                                        </button>
+                                    </form>
+                                    <hr>
+                                    <div>
+                                        <p>You can enter one of your recovery codes in case you lost access to your mobile device.</p>
+                                    </div>
+{{end}}

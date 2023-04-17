@@ -37,7 +37,7 @@ require (
 	github.com/pquerna/otp v1.3.0
 	github.com/prometheus/client_golang v1.12.1
 	github.com/rs/cors v1.8.2
-	github.com/rs/xid v1.3.0
+	github.com/rs/xid v1.5.0
 	github.com/rs/zerolog v1.26.2-0.20220203140311-fc26014bd4e1
 	github.com/sftpgo/sdk v0.0.0-20220110174344-ecf586dd8941
 	github.com/shirou/gopsutil/v3 v3.22.1
